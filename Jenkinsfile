@@ -36,5 +36,10 @@ pipeline {
             }
         }
     }
-    
+   post {
+        always {
+            emailext body: 'build successful. view console output ${BUILD_URL}', subject: '${BUILD_JOB} [${BUILD_NUMBER}]', to: 'nsmgbros001@gmail.com'
+        }
+    }
+} 
 }

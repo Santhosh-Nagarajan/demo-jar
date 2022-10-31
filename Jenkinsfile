@@ -31,7 +31,7 @@ pipeline {
         }
         stage ('Deploy') {
             steps{
-            deploy adapters: [tomcat10(credentialsId: 'd4baff9f-83ff-40ab-a724-16ce0e2c4343', path: '', url: 'http://localhost:8090/')], contextPath: 'pythonfile', onFailure: false, jar: '**/*.jar'
+            deploy adapters: [tomcat10(path: '', url: 'http://localhost:8090/')], contextPath: 'pythonfile', onFailure: false, jar: '**/*.jar'
              echo "Deploy successfully";
             }
         }

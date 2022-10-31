@@ -2,6 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'MAVEN'
+        java 'JAVA'
     }
     stages {
         stage('clone') {
